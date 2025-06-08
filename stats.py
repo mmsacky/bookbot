@@ -13,3 +13,17 @@ def count_char(book_text):
         else:
             char_count[char] = 1
     return char_count
+
+
+
+
+def sort_on(dict):
+    return dict["num"]
+
+def sort_list(characters_values):
+    sorted_list = []
+    for character, character_count in characters_values.items():
+        if character.isalpha() == True:
+            sorted_list.append({"char" : character, "num" : character_count})
+            sorted_list.sort(reverse=True, key=sort_on)
+    return sorted_list
